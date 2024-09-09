@@ -794,7 +794,9 @@ footer .fitur div p:hover {
   .referral {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
   }
   .referral .img img {
     width: 90%;
@@ -809,7 +811,7 @@ footer .fitur div p:hover {
     gap: 20px;
     justify-content: left;
   }
-  .referral .teks h1 {
+  .referral .teks .teks2 h1 {
     font-size: 30px;
     width: 80%;
     text-align: left;
