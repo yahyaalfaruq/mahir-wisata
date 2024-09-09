@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(./asset/pexels-jamie-13759.jpg) no-repeat center center;
+  background-size: cover;
+  height: 630px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.navbar.nav-scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo img {
+  width: 100px;
+  height: auto;
+}
+
+.navbar .search {
+  bottom: 30px;
+}
+
+.navbar .search i {
+  margin-right: 50px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#myLinks {
+  display: none;
+}
+
+#myLinks a {
+  text-decoration: none;
+  color: white;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 1001;
+}
+
+.burger-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+#myLinks {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 86px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+#myLinks a {
+  padding: 15px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#myLinks a:hover {
+  background-color: #575757;
+}
+
+/* Transisi untuk animasi */
+.burger-menu.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#myLinks a:hover {
+  border-bottom: 1px solid white;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 25px;
+  color: white;
+}
+
+.hero p {
+  font-size: 15px;
+  color: white;
+}
+
+.container .hero .uncover .teks-unc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.destinasi {
+  margin-bottom: 80px;
+}
+
+.destinasi h1 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.destinasi-card img {
+  width: 170px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.destinasi-card button div:hover img {
+  transform: scale(1.05);
+}
+
+.destinasi .destinasi-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.destinasi .destinasi-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.destinasi .destinasi-card button {
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.destinasi .destinasi-card div h2 {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.831);
+}
+
+.destinasi .destinasi-card div:hover .overlay2 {
+  opacity: 1;
+}
+
+.destinasi .destinasi-card button div .overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* opacity: 0; */
+  /* transition: opacity 0.3s; */
+  padding: 10px 0px 0px 0px;
+}
+
+.referral {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  background-color: #f4f4f4;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  gap: 20px;
+}
+
+.referral .teks {
+  text-align: center;
+  width: 355px;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+}
+
+.referral .teks:hover {
+  border: 2px solid blue;
+}
+
+.referral .teks .teks2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.referral h1 {
+  font-size: 20px;
+  text-align: center;
+  width: 88%;
+}
+
+.referral .button-referral {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 15px 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(203, 203, 203);
+}
+
+.referral .button-referral button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(72, 72, 246);
+  color: white;
+}
+
+.referral .button-referral button:hover {
+  background-color: blue;
+  transform: scale(1.05);
+}
+
+.referral .img {
+  text-align: center;
+}
+
+.referral .img img {
+  width: 90%;
+}
+
+.inspirasi {
+  padding: 0px 20px;
+}
+
+.inspirasi h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.inspirasi .card-inspirasi {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.inspirasi .card-inspirasi div {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.inspirasi .card-inspirasi .price {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+}
+
+.inspirasi .card-inspirasi .price h2 {
+  font-size: 18px;
+}
+
+.inspirasi .card-inspirasi .price del {
+  font-weight: 400;
+  color: #aaa;
+}
+
+.inspirasi .card-inspirasi .price span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inspirasi .card-inspirasi .price button {
+  padding: 8px 13px;
+  background-color: blue;
+  color: white;
+}
+
+.inspirasi .card-inspirasi .price button:hover {
+  transform: scale(1.05);
+}
+
+.inspirasi .card-inspirasi div img {
+  width: 350px;
+  height: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.inspirasi .card-inspirasi button {
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* opacity: 0; */
+  transition: opacity 0.3s;
+  padding: 10px 0px 0px 0px;
+}
+
+.overlay h2 {
+  padding-bottom: 50px;
+  padding-top: 40px;
+}
+
+.overlay .fasilitas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.overlay p i {
+  background-color: #04aa6d;
+  border-radius: 25px;
+}
+
+.inspirasi .card-inspirasi div:hover .overlay {
+  opacity: 1;
+}
+
+.inspirasi .card-inspirasi div:hover img {
+  transform: scale(1.05);
+}
+
+.inspirasi .card-inspirasi button div .price {
+  position: relative;
+}
+
+.sponsor-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.sponsor-slider {
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.sponsor-container .sponsor-slider img {
+  width: 100px;
+  height: 80px;
+  margin: 0 15px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.panduan {
+  margin-bottom: 30px;
+}
+
+.panduan h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.panduan .card-panduan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.panduan .card-panduan div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.panduan .card-panduan div img {
+  width: 350px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.panduan .card-panduan div p {
+  width: 88%;
+  font-size: 15px;
+  text-align: left;
+}
+
+.testimoni h1 {
+  text-align: center;
+}
+.swiper {
+  width: 85%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.swiper h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 60px;
+  min-height: 300px;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #72b4ff;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  padding-bottom: 30px;
+}
+
+footer .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer .logo .logo-img {
+  text-align: center;
+}
+
+footer .logo .logo-img img {
+  width: 60%;
+}
+
+footer .logo .medsos i {
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  color: black;
+}
+
+footer .fitur {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  color: white;
+}
+
+footer .fitur div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 0px;
+}
+
+footer .fitur div p:hover {
+  border-bottom: 2px solid white;
+}
+
+.hr-footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy p {
+  text-align: center;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .destinasi .destinasi-card button div img {
+    width: 200px;
+  }
+  .referral {
+    flex-direction: row;
+  }
+  .referral .img img {
+    width: 60%;
+  }
+  .referral .teks {
+    height: 200px;
+    margin-right: 90px;
+  }
+  .referral .teks .teks2 h1 {
+    font-size: 15px;
+  }
+  .referral .teks .teks2 .button-referral button {
+    padding: 10px;
+  }
+  .referral .teks .teks2 .button-referral input {
+    padding: 10px;
+  }
+  .panduan .card-panduan div img {
+    width: 76%;
+  }
+  .panduan .card-panduan div p {
+    width: 76%;
+  }
+  .contact-section {
+    padding: 30px 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1440px;
+  }
+  .icon {
+    display: none;
+  }
+  .navbar {
+    margin-top: -5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar #myLinks {
+    display: inline;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .burger-menu {
+    display: none;
+  }
+  #myLinks {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+  }
+
+  #myLinks a {
+    color: white;
+    padding: 0;
+  }
+  .navbar .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 80px;
+    width: 56%;
+  }
+  .navbar .search i {
+    display: inline;
+    font-size: 20px;
+    color: white;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .navbar .active {
+    margin-left: 80px;
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+  .destinasi .teks-destinasi {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+  }
+  .destinasi .teks-destinasi h1 {
+    margin-left: 90px;
+  }
+  .destinasi-card img {
+    width: 200px;
+    height: 280px;
+  }
+  .referral {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .referral .img img {
+    width: 90%;
+  }
+  .referral .teks {
+    width: 40%;
+    height: 363px;
+  }
+  .referral .teks .button-referral {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    justify-content: left;
+  }
+  .referral .teks h1 {
+    font-size: 30px;
+    width: 80%;
+    text-align: left;
+  }
+  .referral .teks .button-referral input {
+    width: 70%;
+  }
+  .referral .teks .button-referral button {
+    padding: 15px 50px;
+  }
+  .inspirasi .card-inspirasi {
+    gap: 30px;
+  }
+  .inspirasi .card-inspirasi div .button img {
+    width: 520px;
+  }
+  .inspirasi .card-inspirasi div .button {
+    width: 520px;
+  }
+  .panduan .card-panduan {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .panduan .card-panduan div {
+    width: 28%;
+    height: 300px;
+  }
+  .panduan .card-panduan div img {
+    width: 310px;
+  }
+  .panduan .card-panduan div p {
+    font-size: 13px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 400px;
+  }
+  .inspirasi .teks-inspirasi {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+  }
+  .inspirasi .teks-inspirasi h1 {
+    margin-left: 80px;
+  }
+  .inspirasi .card-inspirasi .price h2 {
+    font-size: 25px;
+  }
+  .panduan .teks-panduan {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+  }
+  .panduan .teks-panduan h1 {
+    margin-left: 100px;
+  }
+  .swiper .teks-testi {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+  }
+}

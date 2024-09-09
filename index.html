@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahir Wisata</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="./asset/Screenshot_2024-09-09_081024-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="hero">
+          <div class="navbar" data-aos="fade-down">
+            <div class="logo">
+              <img
+                src="./asset/Screenshot_2024-09-06_125446-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <div class="burger-menu" onclick="toggleMenu()">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="topnav">
+              <div id="myLinks" class="navbar-links">
+                <a href="#destinasi">Destinasi</a>
+                <a href="#wisata">Wisata</a>
+                <a href="#panduan">Panduan</a>
+                <a href="#contact">Contact</a>
+              </div>
+              <div class="search">
+                <i class="ri-search-2-line" id="searchIcon"></i>
+              </div>
+            </div>
+          </div>
+          <div id="searchModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <input type="text" placeholder="search" />
+            </div>
+          </div>
+          <div class="uncover" data-aos="fade-up">
+            <div class="teks-unc">
+              <h1 class="title">Uncover Hidden Gems with Us</h1>
+              <p>
+                Discover the Best Travel Destination and Create Unforgetable
+                Exprience
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="destinasi" id="destinasi">
+          <div class="teks-destinasi">
+            <h1>Destinasi Pilihan</h1>
+          </div>
+          <div class="destinasi-card">
+            <button>
+              <div class="card1">
+                <img src="./asset/bintan.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Bintan</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card2">
+                <img src="./asset/bromo.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Bromo</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card3">
+                <img src="./asset/danau-toba.jpeg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Danau Toba</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card4">
+                <img src="./asset/labuan-bajo.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Labuan Bajo</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card5">
+                <img src="./asset/lombok.webp" alt="" />
+                <div class="overlay2"></div>
+                <h2>Lombok</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card6">
+                <img src="./asset/pulau-komod.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Pulau Komodo</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card7">
+                <img src="./asset/raja-ampat.jpeg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Raja Ampat</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card8">
+                <img src="./asset/wae rebo.jpeg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Wae Rebo</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card9">
+                <img src="./asset/bali.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Bali</h2>
+              </div>
+            </button>
+            <button>
+              <div class="card10">
+                <img src="./asset/monas.jpg" alt="" />
+                <div class="overlay2"></div>
+                <h2>Monas</h2>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="referral">
+          <div class="img">
+            <img src="./asset/COUPLE SERIES-EBOOKLEDKEMENPAR-ADV.jpg" alt="" />
+          </div>
+          <div class="teks">
+            <div class="teks2">
+              <h1>
+                Dapatkan E-Book Travel Gratis dengan Membagikan Kode di bawah
+                Ini
+              </h1>
+              <div class="button-referral">
+                <input type="text" value="KODE123" readonly />
+                <button>Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inspirasi" id="wisata">
+          <div class="teks-inspirasi">
+            <h1>Wisata Populer</h1>
+          </div>
+          <div class="card-inspirasi">
+            <div class="card1-ins">
+              <button class="button">
+                <img
+                  src="./asset/keunikan-Labuan-Bajo-5-1-1024x1024.webp"
+                  alt="Paket Wisata Labuan Bajo"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Labuan Bajo</h2>
+                  <strong>3 HARI 2 MALAM 9 DESTINASI</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Goa Batu Cermin</p>
+                    <p><i class="ri-check-line"></i> Gua Rangko</p>
+                    <p><i class="ri-check-line"></i> Sylvia Bukit</p>
+                    <p><i class="ri-check-line"></i> Pulau Padar</p>
+                    <p><i class="ri-check-line"></i> Pulau Komodo</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card2-ins">
+              <button class="button">
+                <img
+                  src="./asset/bedugul-bali-golden-tour.jpg"
+                  alt="Paket Wisata Bedugul Bali"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card3-ins">
+              <button class="button">
+                <img
+                  src="./asset/elang-loji.jpg"
+                  alt="Paket Wisata Elang Loji"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card4-ins">
+              <button class="button">
+                <img
+                  src="./asset/5-komodo-ntt.jpg"
+                  alt="Paket Wisata Komodo NTT"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card5-ins">
+              <button class="button">
+                <img
+                  src="./asset/gili-meno.webp"
+                  alt="Paket Wisata Gili Meno"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card6-ins">
+              <button class="button">
+                <img src="./asset/gua.webp" alt="Paket Wisata Gua" />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card7-ins">
+              <button class="button">
+                <img
+                  src="./asset/Gunung_Rinjani_dan_danau_Segara_Anak.jpg"
+                  alt="Paket Wisata Gunung Rinjani"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card8-ins">
+              <button class="button">
+                <img
+                  src="./asset/homepage-portrait-borobudur.jpg"
+                  alt="Paket Wisata Borobudur"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card9-ins">
+              <button class="button">
+                <img src="./asset/toba.jpg" alt="Paket Wisata Danau Toba" />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+            <div class="card10-ins">
+              <button class="button">
+                <img
+                  src="./asset/pulau-kelor.webp"
+                  alt="Paket Wisata Danau Toba"
+                />
+                <div class="overlay">
+                  <h2>Deskripsi Paket Bedugul Bali</h2>
+                  <strong>PROMO TOUR BALI 3 HARI 2 MALAM</strong>
+                  <div class="fasilitas">
+                    <p><i class="ri-check-line"></i> Bloom Garden</p>
+                    <p><i class="ri-check-line"></i> Pura Ulundanu</p>
+                    <p><i class="ri-check-line"></i> Tanah Lot</p>
+                    <p><i class="ri-check-line"></i> Pantai Melasti</p>
+                    <p><i class="ri-check-line"></i> Uluwatu</p>
+                    <p><i class="ri-check-line"></i> Sunset Dinner Jimbaran</p>
+                  </div>
+                </div>
+              </button>
+              <div class="price">
+                <h2><del>4.935</del> 3.948 K/<span>Package</span></h2>
+                <button>Lihat Detail</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sponsor">
+          <div class="sponsor-container">
+            <div class="sponsor-slider">
+              <img src="./asset/visa-removebg-preview.png" alt="Sponsor 1" />
+              <img src="./asset/paypal-removebg-preview.png" alt="Sponsor 2" />
+              <img src="./asset/ana-removebg-preview.png" alt="Sponsor 3" />
+              <img src="./asset/bank-removebg-preview.png" alt="Sponsor 4" />
+              <img
+                src="./asset/shangri-la-removebg-preview.png"
+                alt="Sponsor 5"
+              />
+              <img
+                src="./asset/Logo_Dana_-_Dompet_Digital_-_Download_File_Vector_PNG-removebg-preview.png"
+                alt="Sponsor 6"
+              />
+              <img src="./asset/garuda-removebg-preview.png" alt="Sponsor 7" />
+            </div>
+          </div>
+        </div>
+        <div class="panduan" id="panduan">
+          <div class="teks-panduan">
+            <h1>Panduan Perjalanan</h1>
+          </div>
+          <div class="card-panduan">
+            <div class="card1-panduan">
+              <img src="./asset/indo-care.jpeg" alt="" />
+              <p>
+                Kementerian Pariwisata dan Ekonomi Kreatif mempersembahkan
+                InDOnesia CARE, sebuah simbol dukungan berupa panduan protokol
+                kesehatan pariwisata yang mengedepankan usaha terbaik dalam
+                mewujudkan kebersihan, kesehatan, keselamatan, dan kelestarian
+                lingkungan bersama di destinasi pariwisata Indonesia.
+              </p>
+            </div>
+            <div class="card2-panduan">
+              <img src="./asset/visa.jpeg" alt="" />
+              <p>
+                Pastikan untuk mempelajari semua persyaratan keimigrasian yang
+                harus dipenuhi sebelum mengunjungi Indonesia, termasuk e-paspor
+                dan e-visa.
+              </p>
+            </div>
+            <div class="card3-panduan">
+              <img src="./asset/beach.jpg" alt="" />
+              <p>
+                Temukan semua yang perlu Sobat Pesona ketahui tentang cara
+                menuju ke sini, peraturan apa yang harus diperhatikan, dan
+                banyak hal penting lainnya dalam mengatur rencana perjalanan
+                Sobat Pesona ke Indonesia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="teks-testi">
+            <h1>Testimoni</h1>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h2>Georgia Joe</h2>
+              <p>
+                Everything was great :). Really lovely guides and friendly.
+                Knowledge was brilliant so answered a lot of questions we had.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>Alexandro Leo</h2>
+              <p>
+                Amazing trip, everything was taken care of from pickup to drop
+                off. Great driver, took care of every stop.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>Jammy Hart</h2>
+              <p>
+                Unbelievable experience! Thank you for being such amazing tour
+                guides.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>Vandeer Beek</h2>
+              <p>
+                It was a nice private overview trip to the famous sites around
+                Komodo Island. Lunch buffet was decent.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>Freetz Family</h2>
+              <p>
+                From the beginning to the end this tour was perfect! Really nice
+                people, thanks for making our Honeymoon so nice this day.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>Edward Hope</h2>
+              <p>
+                Amazing tour, the team at KaiaExplorer went above and beyond to
+                accommodate our needs and personalise the trip for us.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div id="contact" class="contact-section">
+          <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to send us a message!</p>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+        <footer>
+          <div class="footer">
+            <div class="logo">
+              <div class="logo-img">
+                <img
+                  src="./asset/Screenshot_2024-09-06_125446-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div class="medsos">
+                <a href="">
+                  <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="">
+                  <i class="ri-twitter-x-fill"></i>
+                </a>
+                <a href="">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="">
+                  <i class="ri-tiktok-fill"></i>
+                </a>
+              </div>
+            </div>
+            <div class="fitur">
+              <div class="teks1">
+                <p>Reviews</p>
+                <p>Community</p>
+                <p>Affiliate</p>
+                <p>Refund</p>
+                <p>Security</p>
+              </div>
+              <div class="teks2">
+                <p>Dashboard</p>
+                <p>Carrer</p>
+                <p>Help Center</p>
+                <p>Collaburation</p>
+                <p>Rewards</p>
+              </div>
+            </div>
+          </div>
+          <div class="hr-footer">
+            <hr />
+          </div>
+          <div class="copy">
+            <p>2024 &copy;Copyright Mahir Wisata | All Rights | Reserved</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      AOS.init();
+      document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 0) {
+            nav.classList.add("nav-scrolled");
+            nav.classList.remove("nav-top");
+          } else {
+            nav.classList.remove("nav-scrolled");
+            nav.classList.add("nav-top");
+          }
+        });
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          390: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const slider = document.querySelector(".sponsor-slider");
+
+      slider.addEventListener("mouseenter", () => {
+        slider.style.animationPlayState = "paused";
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        slider.style.animationPlayState = "running";
+      });
+
+      function toggleMenu() {
+        var menu = document.getElementById("myLinks");
+        var burger = document.querySelector(".burger-menu");
+
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+          burger.classList.remove("active");
+        } else {
+          menu.style.display = "flex";
+          burger.classList.add("active");
+        }
+      }
+
+      // Get modal and search icon
+      var modal = document.getElementById("searchModal");
+      var searchIcon = document.getElementById("searchIcon");
+      var closeModal = document.getElementsByClassName("close")[0];
+
+      // Show modal when search icon is clicked
+      searchIcon.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // Close modal when close button is clicked
+      closeModal.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close modal when user clicks outside of the modal content
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
