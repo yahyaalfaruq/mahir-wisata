@@ -373,7 +373,7 @@ input[type="text"] {
 }
 
 .inspirasi .card-inspirasi .price h2 {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .inspirasi .card-inspirasi .price del {
@@ -397,7 +397,7 @@ input[type="text"] {
 }
 
 .inspirasi .card-inspirasi div img {
-  width: 350px;
+  width: 357px;
   height: 300px;
   border-radius: 8px;
   transition: transform 0.3s;
