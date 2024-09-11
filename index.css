@@ -531,18 +531,21 @@ input[type="text"] {
   margin-bottom: 50px;
 }
 
-.swiper h1 {
-  text-align: center;
+.swiper h2 {
   padding-bottom: 30px;
 }
 
+.swiper-button-next {
+  padding-top: 70px;
+}
+
+.swiper-button-prev {
+  padding-top: 70px;
+}
+
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f4f4f4;
   border-radius: 8px;
   padding: 60px;
@@ -740,10 +743,10 @@ footer .fitur div p:hover {
     padding: 10px;
   }
   .panduan .card-panduan div img {
-    width: 76%;
+    width: 90%;
   }
   .panduan .card-panduan div p {
-    width: 76%;
+    width: 90%;
   }
   .contact-section {
     padding: 30px 90px;
@@ -859,6 +862,10 @@ footer .fitur div p:hover {
   .inspirasi .card-inspirasi div .button {
     width: 520px;
   }
+  .panduan h1 {
+    padding: 0;
+    margin: 0;
+  }
   .panduan .card-panduan {
     flex-direction: row;
     flex-wrap: wrap;
@@ -867,14 +874,20 @@ footer .fitur div p:hover {
   }
   .panduan .card-panduan div {
     width: 28%;
-    height: 300px;
   }
   .panduan .card-panduan div img {
     width: 310px;
+    height: 200px;
+  }
+  .panduan .card-panduan .card1-panduan {
+    margin-top: 50px;
+  }
+  .panduan .card-panduan .card1-panduan img {
+    height: 200px;
   }
   .panduan .card-panduan div p {
     font-size: 13px;
-    margin-right: 40px;
+    width: 87%;
   }
   .footer {
     display: flex;
