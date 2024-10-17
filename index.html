@@ -23,7 +23,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
@@ -53,6 +56,14 @@
               <div class="search">
                 <i class="ri-search-2-line" id="searchIcon"></i>
               </div>
+              <address id="toggle-button" class="theme-toggle">
+                <img
+                  src="https://assets-global.website-files.com/655cd88e6249ce66bb02cfbc/655d0474630f5c8d9e34d057_sun.svg"
+                  loading="lazy"
+                  id="toggle-img"
+                  alt="sun icon"
+                />
+              </address>
             </div>
           </div>
           <div id="searchModal" class="modal">
@@ -611,6 +622,66 @@
           }
         });
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var userPreference;
+        if (getCookie("appearance")) {
+          // Use the saved preference if there is a cookie
+          userPreference = getCookie("appearance");
+        } else {
+          // Use system preference if there is no cookie
+          userPreference =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        }
+        // Apply the user preference
+        applyAppearance(userPreference);
+        // Add event listener to the toggle button
+        document
+          .getElementById("toggle-button")
+          .addEventListener("click", toggleMode);
+      });
+      function applyAppearance(mode) {
+        var imgElement = document.getElementById("toggle-img");
+        if (mode === "dark") {
+          document.body.classList.add("dark");
+          imgElement.src =
+            "https://uploads-ssl.webflow.com/655cd88e6249ce66bb02cfbc/655da2e5d85dfa7bc6a65215_moon.svg";
+        } else {
+          document.body.classList.remove("dark");
+          imgElement.src =
+            "https://assets-global.website-files.com/655cd88e6249ce66bb02cfbc/655d0474630f5c8d9e34d057_sun.svg";
+        }
+        setCookie("appearance", mode, 30); // Expires in 30 days
+      }
+      function toggleMode() {
+        var newMode = document.body.classList.contains("dark")
+          ? "light"
+          : "dark";
+        applyAppearance(newMode);
+      }
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0)
+            return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
 
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,

@@ -46,6 +46,22 @@ body {
   cursor: pointer;
 }
 
+.dark {
+  background-color: #0c111d;
+}
+
+.dark .destinasi {
+  color: white;
+}
+
+.dark .inspirasi {
+  color: white;
+}
+
+.dark .panduan {
+  color:  white;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -782,19 +798,22 @@ footer .fitur div p:hover {
     background-color: transparent;
     justify-content: center;
     align-items: center;
-    margin-right: 80px;
   }
 
   #myLinks a {
     color: white;
-    padding: 0;
+    width: 10%;
   }
   .navbar .topnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 80px;
-    width: 56%;
+    width: 80%;
+  }
+  .navbar .search {
+    display: contents;
+    text-align: center;
   }
   .navbar .search i {
     display: inline;
